@@ -4,6 +4,7 @@ alias pcip='dig +short myip.opendns.com @resolver1.opendns.com'
 
 # GIT
 alias ga='git add'
+alias gapa='git add --patch'
 alias gc='git commit -v'
 alias gc!='git commit -v --amend'
 alias gd='git diff'
@@ -16,6 +17,10 @@ alias gpristine='git reset --hard && git clean -dfx'
 
 function ga!() {
   git add "*$1*"
+}
+
+function gapa!() {
+  git add --patch "*$1*"
 }
 
 function mkcdt() {
