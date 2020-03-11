@@ -2,6 +2,13 @@ export EDITOR=/usr/bin/vim
 
 alias pcip='dig +short myip.opendns.com @resolver1.opendns.com'
 
+# General
+alias j='joplin'
+
+alias bb='bitbucketcli'
+alias listpr='listPr'
+alias createpr='createPr'
+
 # GIT
 alias ga='git add'
 alias gapa='git add --patch'
@@ -10,13 +17,26 @@ alias gc!='git commit -v --amend'
 alias gd='git diff'
 alias gds='git diff --staged'
 alias gm='git merge'
+alias go='git checkout '
 alias gst='git status'
+alias glolaa='git log --graph --pretty=format:"%C(yellow)%h %C(green)[%ad] %C(reset)%s %C(blue)(%cn)" --date=short --all'
 alias glola='git log --graph --pretty=format:"%C(yellow)%h %C(green)[%ad]%C(red)%d %C(reset)%s %C(blue)(%cn)" --date=short --all'
+alias glolas='git log --graph --pretty=format:"%C(yellow)%h %C(green)[%ad]%C(red)%d %C(reset)%s %C(blue)(%cn)" --date=short --all --simplify-by-decoration'
+alias gloll='git log --graph --pretty=format:"%C(yellow)%h %C(green)[%ad] %C(reset)%s %C(blue)(%cn)" --date=short'
 alias glol='git log --graph --pretty=format:"%C(yellow)%h %C(green)[%ad]%C(red)%d %C(reset)%s %C(blue)(%cn)" --date=short'
 alias gpristine='git reset --hard && git clean -dfx'
+alias gdeadbranches='git branch --merged | egrep -v "(^\\*|master|development|acceptance)"'
+
+function gqs() {
+  git-quick-stats --my-daily-stats
+}
 
 function ga!() {
   git add "*$1*"
+}
+
+function gd!() {
+  git diff "*$1*"
 }
 
 function gapa!() {
@@ -27,3 +47,10 @@ function mkcdt() {
   cd "$(mktemp -d)"
 }
 
+function createPr() {
+  bb pr create
+}
+
+function listPr() {
+  bb pr list
+}
