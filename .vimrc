@@ -42,6 +42,16 @@ autocmd BufWritePre * %s/\s\+$//e
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
+highlight gitcommitSummary ctermbg=blue ctermfg=black
+
+au BufNewFile,BufFilePre,BufRead *.md set
+  \ filetype=markdown
+
+au FileType markdown set
+  \ colorcolumn=0
+  \ textwidth=0
+  \ wrap
+
 au FileType gitcommit set
   \ tw=72
   \ tabstop=2
