@@ -29,7 +29,12 @@ set softtabstop=2             " Nr of spaces thta a <tab> count for while
 set expandtab                 " Convert tabs to spaces
 
 " Set line number highlighting
-hi LineNr ctermfg=5
+hi LineNr ctermfg=1
+hi CursorLineNr ctermbg=1
+hi CursorLineNr cterm=NONE ctermfg=NONE
+hi CursorLine cterm=NONE ctermfg=NONE
+set cursorline
+
 
 " Show trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
