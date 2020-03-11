@@ -20,7 +20,7 @@ set laststatus=2              " Always display the status bar
 set scrolloff=2               " Nr of lines to show below/above cursor
 set nowrap                    " Disable line wrapping
 set hlsearch                  " Highlight all search results
-set relativenumber            " Enable relative line numbers
+"set relativenumber            " Enable relative line numbers
 
 set tabstop=2                 " Indent using <nr> spaces
 set shiftwidth=2              " When shifting, indent using <nr> spaces
