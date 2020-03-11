@@ -35,6 +35,8 @@ hi CursorLineNr cterm=NONE ctermfg=NONE
 hi CursorLine cterm=NONE ctermfg=NONE
 set cursorline
 
+" Automatically remove all trailing whitespace
+autocmd BufWritePre * %s/\s\+$//e
 
 " Show trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
