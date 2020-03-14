@@ -12,7 +12,6 @@ set wildmenu                  " Menu completion in command mode on <Tab>
 set wildmode=full             " <Tab> cycles between all matching choices.
 set showcmd                   " Show the to be executed command
 set encoding=utf-8            " Use an encoding that supports unicode
-set colorcolumn=80            " Show column line
 set ruler                     " Always show cursor position
 set nolazyredraw              " No screen update during marco & script execution
 set showmatch                 " Show matching brackets
@@ -28,10 +27,13 @@ set softtabstop=2             " Nr of spaces thta a <tab> count for while
                               " performing editing operations.
 set expandtab                 " Convert tabs to spaces
 
+" Set up ruler
+set colorcolumn=80,100
+highlight ColorColumn ctermbg=234 guibg=darkgray
+
 " Set line number highlighting
 hi LineNr ctermfg=1
-hi CursorLineNr ctermbg=1
-hi CursorLineNr cterm=NONE ctermfg=NONE
+hi CursorLineNr ctermbg=1 cterm=NONE ctermfg=NONE
 hi CursorLine cterm=NONE ctermfg=NONE
 set cursorline
 
