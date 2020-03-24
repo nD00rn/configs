@@ -2,9 +2,6 @@ export EDITOR=/usr/bin/vim
 
 alias pcip='dig +short myip.opendns.com @resolver1.opendns.com'
 
-# General
-alias j='joplin'
-
 alias bb='bitbucketcli'
 alias listpr='listPr'
 alias createpr='createPr'
