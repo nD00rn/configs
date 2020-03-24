@@ -5,6 +5,7 @@ alias pcip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias bb='bitbucketcli'
 alias listpr='listPr'
 alias createpr='createPr'
+alias lg='lazygit'
 
 # GIT
 alias ga='git add'
